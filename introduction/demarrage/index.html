@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Démarrage - Sway 🌴 - Version FR</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "D\u00e9marrage";
+        var mkdocs_page_input_path = "introduction/demarrage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Sway 🌴 - Version FR
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Accueil</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Démarrage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#glossaire">Glossaire</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comprendre-les-types-de-programmes-sway">Comprendre les types de programmes Sway</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#votre-premier-projet-sway">Votre premier projet Sway</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ecrire-le-contrat">Écrire le contrat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#abi">ABI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aller-ligne-par-ligne">Aller ligne par ligne</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implement-abi">Implement ABI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ce-que-nous-venons-de-faire">Ce que nous venons de faire</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#construire-le-contrat">Construire le contrat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deployer-le-contrat">Déployer le contrat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#faite-tourner-votre-noeud-fuel">Faite tourner votre noeud Fuel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deployer-counter_contract-vers-votre-noeud-fuel-local">Déployer counter_contract vers votre noeud Fuel local</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#test-de-votre-contrat">Test de votre contrat</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../introcution/toolchainFuel.md">La toolchain Fuel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forcProject/">Mon premier projet</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Sway 🌴 - Version FR</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Introduction &raquo;</li>
+      <li>Démarrage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demarrage"><a href="#getting-started">Démarrage</a></h1>
+<p>Suivez ce guide pour écrire, tester et déployer un contrat intelligent simple dans Sway.</p>
+<h2 id="glossaire"><a href="#glossary">Glossaire</a></h2>
+<p>Avant de commencer, il peut être utile de comprendre la terminologie qui sera utilisée tout au long de la documentation et la façon dont elle se rapporte les uns aux autres :</p>
+<ul>
+<li><strong>Fuel</strong> : la blockchain Fuel.</li>
+<li><strong>FuelVM</strong> : la machine virtuelle qui alimente Fuel.
+<strong>Sway</strong> : le langage spécifique au domaine conçu pour la FuelVM ; il est inspiré de Rust.
+<strong>Forc</strong> : le système de construction et le gestionnaire de paquets pour Sway, similaire à Cargo pour Rust.</li>
+</ul>
+<h2 id="comprendre-les-types-de-programmes-sway"><a href="#understand-sway-program-types">Comprendre les types de programmes Sway</a></h2>
+<p>Il existe quatre types de programmes Sway :</p>
+<ul>
+<li><code>contrat</code></li>
+<li><code>predicate</code></li>
+<li><code>script</code></li>
+<li><code>library</code> (bibliothèque)</li>
+</ul>
+<p>Les contrats, prédicats et scripts peuvent produire des artefacts utilisables sur la blockchain, tandis qu'une bibliothèque est simplement un projet conçu pour la réutilisation du code et n'est pas directement déployable.</p>
+<p>Voir <a href="../sway-program-types/index.html">le chapitre sur les types de programmes</a> pour plus d'informations.</p>
+<h2 id="votre-premier-projet-sway"><a href="#votre-premier-projet-sway">Votre premier projet Sway</a></h2>
+<p>Nous allons construire un contrat de compteur simple avec deux fonctions : une pour incrémenter le compteur, et une pour retourner la valeur du compteur.</p>
+<p>Quelques informations qui seront utiles avant de continuer :</p>
+<ul>
+<li>Les principales caractéristiques d'un contrat intelligent qui le différencient des scripts ou des prédicats sont qu'il est appelable et avec état.</li>
+<li>Un script est un bytecode exécutable sur la chaîne qui peut appeler des contrats pour effectuer une tâche. Il ne représente pas la propriété d'une ressource et ne peut pas être appelé par un contrat.</li>
+</ul>
+<h3 id="ecrire-le-contrat"><a href="#writing-the-contract">Écrire le contrat</a></h3>
+<p>Tout d'abord, <a href="./installation.html">installons la toolchain Sway</a>. Puis, avec <code>forc</code> installé, créons un projet de contrat :</p>
+<pre><code>forc new counter_contract
+</code></pre>
+<p>Voici le projet que Forc a initialisé :</p>
+<pre><code>$ cd counter_contract
+$ tree .
+├─── Cargo.toml
+├── Forc.toml
+├─── src
+│ └─── main.sw
+└─── tests
+    └─── harness.rs
+</code></pre>
+<p><code>Forc.toml</code> est le <em>fichier de manifeste</em> (similaire à <code>Cargo.toml</code> pour Cargo ou <code>package.json</code> pour Node), et définit les métadonnées du projet telles que le nom du projet et les dépendances.</p>
+<p>Nous allons écrire notre code dans le dossier <code>src/main.sw</code>.</p>
+<p>Changez de répertoire dans votre projet de contrat et supprimez le code passe-partout dans <code>src/main.sw</code>. Chaque fichier Sway doit commencer par une déclaration du type de programme qu'il contient ; ici, nous avons déclaré que ce fichier est un contrat.</p>
+<pre><code>contrat ;
+</code></pre>
+<p>Ensuite, nous allons définir une valeur de stockage. Dans notre cas, nous avons un seul compteur que nous appellerons <code>counter</code> de type 64-bit unsigned integer et l'initialiserons à 0.</p>
+<pre><code>storage {
+    compteur : u64 = 0,
+}
+</code></pre>
+<h3 id="abi"><a href="#abi">ABI</a></h3>
+<p>Une ABI définit une interface, et il n'y a pas de corps de fonction dans l'ABI. Un contrat doit soit définir, soit importer une déclaration ABI et l'implémenter. Il est considéré comme une bonne pratique de définir votre ABI dans une bibliothèque séparée et de l'importer dans votre contrat car cela permet aux appelants du contrat d'importer et d'utiliser l'ABI dans des scripts pour appeler votre contrat.</p>
+<p>Pour plus de simplicité, nous allons définir l'ABI de manière native dans le contrat.</p>
+<pre><code>abi Counter {
+    #[stockage(read, write)]
+    fn increment() ;
+
+    #[stockage(lecture)]
+    fn counter() -&gt; u64 ;
+}
+</code></pre>
+<h3 id="aller-ligne-par-ligne"><a href="#going-line-by-line">Aller ligne par ligne</a></h3>
+<p><code>#[storage(read, write)]</code> est une annotation qui indique que cette fonction a la permission de lire et d'écrire une valeur dans le stockage.</p>
+<p><code>fn increment()</code> - Nous introduisons la fonctionnalité d'incrémentation et indiquons qu'elle ne doit pas retourner de valeur.</p>
+<p><code>#[storage(read)]</code> est une annotation qui indique que cette fonction a la permission de lire des valeurs dans le stockage.</p>
+<p><code>fn counter() -&gt; u64;</code> - Nous introduisons la fonctionnalité d'incrémentation du compteur et indiquons la valeur de retour de la fonction.</p>
+<h3 id="implement-abi"><a href="#implement-abi">Implement ABI</a></h3>
+<p>Sous la définition de votre ABI, vous écrirez l'implémentation des fonctions définies dans votre ABI.</p>
+<pre><code>impl Compteur pour Contrat {
+    #[stockage(read)]
+    fn counter() -&gt; u64 {
+      return storage.counter ;
+    }
+    #[stockage(read, write)]
+    fn increment() {
+        storage.counter = storage.counter + 1 ;
+    }
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <code>return storage.counter;</code> est équivalent à <code>storage.counter</code>.</p>
+</blockquote>
+<h3 id="ce-que-nous-venons-de-faire"><a href="#what-we-just-did">Ce que nous venons de faire</a></h3>
+<p>Lire et retourner la valeur de la propriété counter du stockage du contrat.</p>
+<pre><code>fn counter() -&gt; u64 {
+    retourne storage.counter ;
+}
+</code></pre>
+<p>Le corps de la fonction accède à la valeur du compteur dans le stockage, et incrémente la valeur de un. Ensuite, nous retournons la nouvelle valeur mise à jour du compteur.</p>
+<pre><code>fn increment() {
+    storage.counter = storage.counter + 1 ;
+}
+</code></pre>
+<h3 id="construire-le-contrat"><a href="#build-the-contract">Construire le contrat</a></h3>
+<p>Construisez <code>counter_contract</code> en exécutant la commande suivante dans votre terminal depuis le répertoire <code>counter_contract</code> :</p>
+<pre><code>forc build
+</code></pre>
+<p>Vous devriez voir quelque chose comme cette sortie :</p>
+<pre><code>Bibliothèque compilée "core".
+  Bibliothèque compilée "std".
+  Contrat compilé "counter_contract".
+  La taille du bytecode est de 224 octets.
+</code></pre>
+<h3 id="deployer-le-contrat"><a href="#deployer-le-contrat">Déployer le contrat</a></h3>
+<p>Il est maintenant temps de déployer le contrat et de l'appeler sur un nœud Fuel. Nous allons montrer comment le faire en utilisant <code>forc</code> en ligne de commande, mais vous pouvez aussi le faire en utilisant le <a href="https://fuellabs.github.io/fuels-rs/master/getting-started/contracts.html">Rust SDK</a> ou le <a href="https://fuellabs.github.io/fuels-ts/#deploying-contracts">TypeScript SDK</a>.</p>
+<h3 id="faite-tourner-votre-noeud-fuel"><a href="#spin-up-a-fuel-node">Faite tourner votre noeud Fuel</a></h3>
+<p>Dans un onglet séparé de votre terminal, créez un nœud Fuel local :</p>
+<pre><code>fuel-core run --db-type in-memory
+</code></pre>
+<p>Ceci démarre un noeud Fuel avec une base de données volatile qui sera effacée à l'arrêt (bon pour les tests).</p>
+<h3 id="deployer-counter_contract-vers-votre-noeud-fuel-local"><a href="#deploy-counter_contract-to-your-local-fuel-node">Déployer <code>counter_contract</code> vers votre noeud Fuel local</a></h3>
+<p>Pour déployer <code>counter_contract</code> sur votre noeud Fuel local, ouvrez un nouvel onglet de terminal et exécutez la commande suivante depuis la racine du répertoire <code>wallet_contract</code> :</p>
+<pre><code>forc deploy --unsigned
+</code></pre>
+<p><strong>Note</strong> Vous ne pouvez pas utiliser la même session de terminal qui exécute fuel-core pour exécuter d'autres commandes car cela mettrait fin à votre processus fuel-core.</p>
+<p>Ceci devrait produire une sortie dans <code>stdout</code> qui ressemble à ceci :</p>
+<pre><code>$ forc deploy --unsigned
+  Bibliothèque compilée "core".
+  Bibliothèque compilée "std".
+  Contrat compilé "counter_contract".
+  La taille du bytecode est de 224 octets.
+Contract id: 0xaf94c0a707756caae667ee43ca18bace441b25998c668010192444a19674dc4f
+Journaux :
+TransactionId(HexFormatted(7cef24ea33513733ab78c5daa5328d622d4b38187d0f0d1857b272090d99f96a))
+</code></pre>
+<p>Notez l'identifiant du contrat - vous en aurez besoin si vous voulez construire un frontend pour interagir avec ce contrat.</p>
+<h2 id="test-de-votre-contrat"><a href="#testing-your-contract">Test de votre contrat</a></h2>
+<p>Dans le répertoire <code>tests</code>, naviguez jusqu'à <code>harness.rs.</code> Ici vous verrez qu'il y a un peu de code passe-partout pour vous aider à commencer à interagir avec et à tester votre contrat.</p>
+<p>Au bas du fichier, définissez le corps de <code>can_get_contract_instance</code>. Voici à quoi devrait ressembler votre code pour vérifier que la valeur du compteur a bien été incrémentée :</p>
+<pre><code>#[tokio::test]
+async fn can_get_contract_instance() {
+    // Incrémente le compteur
+    let _result = instance.increment().call().await.unwrap() ;
+
+    // Récupère la valeur actuelle du compteur
+    let result = instance.counter().call().await.unwrap() ;
+    assert !(result.value &gt; 0) ;
+}
+</code></pre>
+<p>Exécutez la commande suivante dans le terminal : <code>forc test</code>.</p>
+<p>Vous verrez quelque chose comme ceci dans votre sortie :</p>
+<pre><code>  Bibliothèque compilée "core".
+  Bibliothèque compilée "std".
+  Contrat compilé "counter_contract".
+  La taille du bytecode est de 224 octets.
+   Compilation de counter_contract v0.1.0 (&lt;path/to/counter_contract&gt;)
+    Terminé test [unoptimized + debuginfo] cible(s) en 4.55s
+     Exécution de tests/harness.rs (target/debug/deps/integration_tests-7a2922c770587b45)
+
+Exécution de 1 test
+test can_get_contract_id ... ok
+
+Résultat du test : ok. 1 réussi ; 0 échoué ; 0 ignoré ; 0 mesuré ; 0 filtré ; terminé en 0.09s
+</code></pre>
+<p>Félicitations, vous venez de créer et de tester votre premier contrat intelligent Sway 🎉. Vous pouvez maintenant construire un frontend pour interagir avec votre contrat en utilisant le SDK TypeScript. Vous pouvez trouver un guide étape par étape pour construire un front-end pour votre projet <a href="https://fuellabs.github.io/fuels-ts/QUICKSTART.html">ici</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../introduction/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../installation/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../introduction/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

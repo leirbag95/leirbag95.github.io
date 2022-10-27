@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Bibliotheque standard - Sway 🌴 - Version FR</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Bibliotheque standard";
+        var mkdocs_page_input_path = "introduction/Bibliotheque standard.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Sway 🌴 - Version FR
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Accueil</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demarrage/">Démarrage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../introcution/toolchainFuel.md">La toolchain Fuel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forcProject/">Mon premier projet</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Sway 🌴 - Version FR</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Bibliotheque standard</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="bibliotheque-standard"><a href="#standard-library">Bibliothèque standard</a></h1>
+<p>Comme pour Rust, Sway dispose de sa propre bibliothèque standard.</p>
+<p>La bibliothèque standard de Sway est la base du logiciel portable Sway, un ensemble d'abstractions minimales partagées pour l'ensemble de l'écosystème Sway. Elle offre des types de base, comme <code>Résult&lt;T, E&gt;</code> et <code>Option&lt;T&gt;</code>, des opérations définies par la bibliothèque sur les primitives du langage, la gestion native des actifs, les opérations contextuelles de la blockchain, le contrôle d'accès, la gestion du stockage et la prise en charge des types d'autres VM, entre autres choses.</p>
+<p>L'ensemble de la bibliothèque standard de Sway est un projet Forc appelé <code>std</code>, et est disponible directement ici : <a href="https://github.com/FuelLabs/sway/tree/master/sway-lib-std">https://github.com/FuelLabs/sway/tree/master/sway-lib-std</a> (naviguez vers la version appropriée si la dernière version <code>master</code> n'est pas compatible).</p>
+<h2 id="utilisation-de-la-bibliotheque-standard"><a href="#using-the-standard-library">Utilisation de la bibliothèque standard</a></h2>
+<p>La bibliothèque standard est rendue implicitement disponible pour tous les projets Forc créés à l'aide de <a href="../forc/commands/forc_new.html"><code>forc new</code></a>. En d'autres termes, il n'est pas nécessaire de spécifier manuellement <code>std</code> comme une dépendance explicite. Forc utilisera automatiquement la version de <code>std</code> qui correspond à sa version.</p>
+<p>L'importation d'éléments de la bibliothèque standard peut être faite en utilisant le mot-clé <code>use</code>, tout comme l'importation d'éléments de n'importe quel projet Sway. Par exemple</p>
+<pre><code>use std::storage::StorageMap ;
+</code></pre>
+<p>Ceci importe le type <code>StorageMap</code> dans l'espace de nom courant.</p>
+<h2 id="prelude-a-la-bibliotheque-standard"><a href="#standard-library-prelude">Prélude à la bibliothèque standard</a></h2>
+<p>Sway est livré avec une grande variété de choses dans sa bibliothèque standard. Cependant, si vous deviez importer manuellement chaque chose que vous utilisez, ce serait très verbeux. Mais importer beaucoup de choses qu'un programme n'utilise jamais n'est pas bon non plus. Un équilibre doit être trouvé.</p>
+<p>Le prélude est la liste des choses que Sway importe automatiquement dans chaque programme Sway. Elle est aussi réduite que possible et se concentre sur les éléments qui sont utilisés dans presque tous les programmes Sway.</p>
+<p>La version actuelle du prelude se trouve dans <a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/prelude.sw"><code>std::prelude</code></a>, et réexporte les éléments suivants :</p>
+<ul>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/address.sw"><code>std::address::Address</code></a>, une enveloppe autour du type <code>b256</code> représentant une adresse de portefeuille.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/contract_id.sw"><code>std::contract_id::ContractId</code></a>, une enveloppe autour du type <code>b256</code> représentant l'ID d'un contrat.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/identity.sw"><code>std::identity::Identity</code></a>, un enum avec deux variantes possibles : <code>Address : Address</code> et <code>ContractId : ContractId</code>.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/vec.sw"><code>std::vec::Vec</code></a>, un vecteur croissant, alloué au tas.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/option.sw"><code>std::option::Option</code></a>, un enum qui exprime la présence ou l'absence d'une valeur.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/result.sw"><code>std::result::Resultat</code></a>, un enum pour les fonctions qui peuvent réussir ou échouer.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/assert.sw"><code>std::assert::assert</code></a>, une fonction qui renvoie la VM si la condition qui lui est fournie est <code>false</code>.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/revert.sw"><code>std::revert::require</code></a>, une fonction qui renverse la VM et enregistre une valeur donnée si la condition qui lui est fournie est <code>false</code>.</li>
+<li><a href="https://github.com/FuelLabs/sway/blob/master/sway-lib-std/src/revert.sw"><code>std::revert::revert</code></a>, une fonction qui renverse la VM.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

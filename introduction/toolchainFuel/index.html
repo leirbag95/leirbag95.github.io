@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>toolchainFuel - Sway 🌴 - Version FR</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "toolchainFuel";
+        var mkdocs_page_input_path = "introduction/toolchainFuel.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Sway 🌴 - Version FR
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Accueil</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demarrage/">Démarrage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../introcution/toolchainFuel.md">La toolchain Fuel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forcProject/">Mon premier projet</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Sway 🌴 - Version FR</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>toolchainFuel</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="the-fuel-toolchain"><a href="#the-fuel-toolchain">The Fuel Toolchain</a></h1>
+<p>La toolchain Fuel est constituée de plusieurs composants.</p>
+<h2 id="forc-forc"><a href="#forc-forc">Forc (<code>forc</code>)</a></h2>
+<p>Le "Fuel Orchestrator" <a href="https://github.com/FuelLabs/sway/tree/master/forc">Forc</a> est notre équivalent du <a href="https://doc.rust-lang.org/cargo/">Cargo</a> de Rust. C'est le principal point d'entrée pour créer, construire, tester et déployer des projets Sway.</p>
+<h2 id="sway-language-server-forc-lsp"><a href="#sway-language-server-forc-lsp">Sway Language Server (<code>forc-lsp</code>)</a></h2>
+<p>Le serveur de langage Sway <code>forc-lsp</code> est fourni pour exposer des fonctionnalités aux IDEs. <a href="./installation.html">Instructions d'installation</a>.</p>
+<p>Actuellement, seul <a href="https://marketplace.visualstudio.com/items?itemName=FuelLabs.sway-vscode-plugin">Visual Studio Code est supporté par un plugin</a>. Le support de Vim est à venir, bien que <a href="https://github.com/FuelLabs/sway.vim">la coloration syntaxique soit fournie</a>.</p>
+<blockquote>
+<p><strong>Note</strong> : Il n'est pas nécessaire de lancer manuellement <code>forc-lsp</code> (le plugin le lancera automatiquement), cependant <code>forc</code> et <code>forc-lsp</code> doivent être dans votre <code>$PATH</code>. Pour vérifier si <code>forc</code> est dans votre <code>$PATH</code>, tapez <code>forc --help</code> dans votre terminal.</p>
+</blockquote>
+<h2 id="sway-formatter-forc-fmt"><a href="#sway-formatter-forc-fmt">Sway Formatter (<code>forc-fmt</code>)</a></h2>
+<p>Un formateur canonique est fourni avec <code>forc-fmt</code>. <a href="./installation.html">Instructions d'installation</a>. Il peut être lancé manuellement avec</p>
+<pre><code>forc fmt
+</code></pre>
+<p>Le <a href="https://marketplace.visualstudio.com/items?itemName=FuelLabs.sway-vscode-plugin">plugin Visual Studio Code</a> formatera automatiquement les fichiers Sway avec <code>forc-fmt</code> lors de la sauvegarde.</p>
+<h2 id="fuel-core-fuel-core"><a href="#fuel-core-fuel-core">Fuel Core (<code>fuel-core</code>)</a></h2>
+<p>Une implémentation du protocole Fuel, <a href="https://github.com/FuelLabs/fuel-core">Fuel Core</a>, est fournie avec la <em>Sway toolchain</em> pour former la <em>Fuel toolchain</em>. <a href="https://github.com/FuelLabs/fuels-rs">Le SDK Rust</a> démarrera et arrêtera automatiquement une instance du nœud pendant les tests, il n'est donc pas nécessaire d'exécuter manuellement un nœud à moins d'utiliser Forc directement sans le SDK.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Installation - Sway 🌴 - Version FR</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation";
+        var mkdocs_page_input_path = "introduction/installation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Sway 🌴 - Version FR
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Accueil</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demarrage/">Démarrage</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation-a-partir-de-fichier-binaires-pre-compiles">Installation à partir de fichier binaires pré-compilés</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-a-partir-des-sources">Installation à partir des sources</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dependances">Dépendances</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installation-a-partir-de-cargo">Installation à partir de Cargo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mise-a-jour-de-forc-depuis-cargo">Mise à jour de forc depuis Cargo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#installation-des-plugins-forc-depuis-cargo">Installation des plugins forc depuis Cargo</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#construire-a-partir-des-sources">Construire à partir des sources</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#activer-la-completion-de-tabulation-pour-bash-fish-zsh-ou-powershell">Activer la complétion de tabulation pour Bash, Fish, Zsh ou PowerShell</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../introcution/toolchainFuel.md">La toolchain Fuel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forcProject/">Mon premier projet</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Sway 🌴 - Version FR</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Introduction &raquo;</li>
+      <li>Installation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation"><a href="#installation">Installation</a></h1>
+<p>La <em>Sway toolchain</em> est suffisante pour compiler les smart contracts Sway. Sinon, notez que si vous voulez exécuter des smart contracts Sway (par exemple pour des tests), un nœud complet Fuel Core est nécessaire, que vous trouverez avec la <em>Sway toolchain</em> en tant que <em>Fuel toolchain</em>.</p>
+<h2 id="installation-a-partir-de-fichier-binaires-pre-compiles"><a href="#installing-from-pre-compiled-binaries">Installation à partir de fichier binaires pré-compilés</a></h2>
+<p>Des fichier binaires pré-compilés pour Linux et macOS sont disponibles pour la Sway toolchain. Windows natif n'est actuellement pas pris en charge (<a href="https://github.com/FuelLabs/sway/issues/1526">suivre le ticket dédié au support Windows</a>). Le sous-système Windows pour Linux devrait fonctionner mais n'est pas officiellement supporté.</p>
+<p><a href="https://github.com/FuelLabs/fuelup"><code>fuelup</code></a> est l'équivalent de <code>rustup</code> de Rust pour la Fuel toolchain. Il permet de télécharger facilement des versions binaires de la Fuel toolchain.</p>
+<p>Commencez par installer <code>fuelup</code> avec :</p>
+<pre><code>curl --proto '=https' --tlsv1.2 -sSf \
+    https://fuellabs.github.io/fuelup/fuelup-init.sh | sh
+</code></pre>
+<p><code>fuelup-init</code> vous demandera la permission d'ajouter <code>~/.fuelup/bin</code> à votre PATH. Sinon, vous pouvez aussi passer <code>--no-modify-path</code> pour que <code>fuelup-init</code> ne modifie pas votre PATH :</p>
+<pre><code>curl --proto '=https' --tlsv1.2 -sSf \
+    https://fuellabs.github.io/fuelup/fuelup-init.sh | sh -s -- --no-modify-path
+</code></pre>
+<p>Une fois <code>fuelup</code> installé, <code>fuelup-init</code> exécute automatiquement la commande suivante</p>
+<pre><code>fuelup toolchain install latest
+</code></pre>
+<p>pour installer la dernière version de la Fuel toolchain.</p>
+<p>Vous pouvez exécuter la même commande plus tard pour mettre à jour la toolchain.</p>
+<h2 id="installation-a-partir-des-sources"><a href="#installing-from-source">Installation à partir des sources</a></h2>
+<h3 id="dependances"><a href="#dependances">Dépendances</a></h3>
+<p>La toolchain Rust est un prérequis pour installer et utiliser Sway. Les instructions spécifiques à la plateforme pour installer <code>rustup</code> peuvent être trouvées <a href="https://www.rust-lang.org/tools/install">ici</a>. Ensuite, installez la toolchain Rust avec :</p>
+<pre><code># Installez la dernière toolchain Rust stable.
+rustup install stable
+</code></pre>
+<p>L'installation de <code>fuel-core</code> peut nécessiter l'installation de dépendances système supplémentaires. Voir <a href="https://github.com/FuelLabs/fuel-core#building">ici</a> pour les instructions.</p>
+<p>La toolchain Sway est construite et testée avec la version <code>stable</code> de la toolchain Rust (<a href="https://github.com/rust-lang/rust/releases/latest">https://github.com/rust-lang/rust/releases/latest</a>). Il n'y a aucune garantie qu'elle fonctionnera avec la toolchain Rust <code>nightly</code>, ou avec des versions <code>stable</code> antérieures, donc assurez-vous que vous utilisez <code>stable</code> avec :</p>
+<pre><code># Mettre à jour la toolchain Rust installée ; peut être utilisé indépendamment.
+rustup update
+# Définir la toolchain Rust stable par défaut ; peut être utilisé indépendamment.
+rustup default stable
+</code></pre>
+<h3 id="installation-a-partir-de-cargo"><a href="#installing-from-cargo">Installation à partir de Cargo</a></h3>
+<p>La toolchain Sway et le nœud complet Fuel Core peuvent être installés à partir des sources avec Cargo :</p>
+<pre><code>cargo install forc fuel-core
+</code></pre>
+<h4 id="mise-a-jour-de-forc-depuis-cargo"><a href="#updating-forc-from-cargo">Mise à jour de <code>forc</code> depuis Cargo</a></h4>
+<p>Vous pouvez mettre à jour la toolchain depuis les sources avec Cargo avec :</p>
+<pre><code>cargo install forc fuel-core
+</code></pre>
+<h4 id="installation-des-plugins-forc-depuis-cargo"><a href="#installing-forc-plugins-from-cargo">Installation des plugins <code>forc</code> depuis Cargo</a></h4>
+<p>L'écosystème Fuel possède quelques plugins qui peuvent être facilement installés via Cargo.</p>
+<blockquote>
+<p><strong>Note</strong> : <code>forc</code> détecte tout ce qui se trouve dans votre <code>$PATH</code> préfixé avec <code>forc-</code> comme un plugin. Utilisez <code>forc plugins</code> pour voir ce que vous avez actuellement installé.</p>
+</blockquote>
+<pre><code># Formateur Sway
+cargo install forc-fmt
+
+# Explorateur de blocs
+cargo install forc-explore
+
+# Serveur de langue Sway
+cargo install forc-lsp
+</code></pre>
+<h3 id="construire-a-partir-des-sources"><a href="#building-from-source">Construire à partir des sources</a></h3>
+<p>Plutôt que d'installer à partir de <code>cargo</code>, la toolchain Sway peut être construite à partir d'un checkout local des sources en suivant les instructions à <a href="https://github.com/FuelLabs/sway">https://github.com/FuelLabs/sway</a>. L'implémentation complète du nœud Fuel Core peut être construite à partir des sources en suivant les instructions de <a href="https://github.com/FuelLabs/fuel-core">https://github.com/FuelLabs/fuel-core</a>.</p>
+<h2 id="activer-la-completion-de-tabulation-pour-bash-fish-zsh-ou-powershell"><a href="#enable-tab-completion-for-bash-fish-zsh-or-powershell">Activer la complétion de tabulation pour Bash, Fish, Zsh ou PowerShell</a></h2>
+<p><code>forc</code> supporte la génération de scripts de complétion pour Bash, Fish, Zsh, et PowerShell. Voir <code>forc completions --help</code> pour plus de détails, mais l'essentiel est aussi simple que d'utiliser un des éléments suivants :</p>
+<pre><code># Bash
+forc completions --shell=bash &gt; ~/.local/share/bash-completion/completions/forc
+
+# Bash (macOS/Homebrew)
+forc completions --shell=bash &gt; $(brew --prefix)/etc/bash_completion.d/forc.bash-completion
+
+# Poisson
+mkdir -p ~/.config/fish/completions
+forc completions --shell=fish &gt; ~/.config/fish/completions/forc.fish
+
+# Zsh
+forc completions --shell=zsh &gt; ~/.zfunc/_forc
+
+# PowerShell v5.0+
+complétions forc --shell=powershell &gt;&gt; $PROFILE.CurrentUserCurrentHost
+# ou
+forc completions --shell=powershell | Out-String | Invoke-Expression
+</code></pre>
+<p>Une fois que les complétions ont été générées et correctement installées, fermez et rouvrez votre terminal pour que les nouvelles complétions prennent effet.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demarrage/" class="btn btn-neutral float-left" title="Démarrage"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../forcProject/" class="btn btn-neutral float-right" title="Mon premier projet">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demarrage/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../forcProject/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
